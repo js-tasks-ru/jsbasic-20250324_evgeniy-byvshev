@@ -12,13 +12,11 @@ function print(text) {
  * @returns {boolean}
  */
 function isValid(name) {
-  return name == null
-    ? false
-    : name.length < 4
-    ? false
-    : name.includes(" ")
-    ? false
-    : true;
+  if (name == null || name.length < 4 || name.includes(" ")) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
 /**
